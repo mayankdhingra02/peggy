@@ -35,6 +35,9 @@ Released: TBD
 - Escape NUL as `\x00` in generated code when a digit follows it. `"\x001"`
   made `generate()` throw an octal escape error, and `[\x001]i` matched U+0001.
   [#670](https://github.com/peggyjs/peggy/pull/670)
+- Check nested repetition expressions for possible infinite loops, including
+  those inside consuming `*`, `+`, and bounded repetition expressions.
+  [#674](https://github.com/peggyjs/peggy/issues/674)
 
 5.1.1
 -----
